@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: auto-dep-updates
+  labels:
+  - ":robot: bot"
+  ignore:
+  - dependency-name: "@buildit/eslint-config"
+    versions:
+    - ">= 0"
+  - dependency-name: "@buildit/gravity-ui-nunjucks"
+    versions:
+    - ">= 0"
+  - dependency-name: "@buildit/gravity-ui-web"
+    versions:
+    - ">= 0"
+  - dependency-name: "@buildit/semantic-release"
+    versions:
+    - ">= 0"
+  - dependency-name: "@buildit/semantic-release-lerna-analyzer"
+    versions:
+    - ">= 0"
+  - dependency-name: "@buildit/semantic-release-lerna-release-notes-generator"
+    versions:
+    - ">= 0"
